@@ -1,2 +1,6 @@
-# flask_website_grade_stats
-Website to share grade statistics extracted from official sources
+# Grade Statistics
+Offline website to share grade statistics extracted from official sources.
+
+
+# Usage
+Just run app.py

@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <h1>{{degree.capitalize()}}</h1>
+    <ul class="list-group">
+        {% for img in images %}
+            <li class="list-group-item"><a href='/static/images/{{degree}}/bar_plots/{{img}}'>{{img.replace('_', ' ').replace('.png', '')}}</a></li>
+            <p class="lead">
+                <img src='/static/images/{{degree}}/bar_plots/{{img}}' alt="Chart" height="300" width="400">
+            </p>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
