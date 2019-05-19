@@ -7,3 +7,6 @@ The actual data extraction was conducted with the notebooks from my other reposi
 
 # Usage
 Just run app.py
+
+# Landing page
+![](https://i.imgur.com/irlP8ul.png)
