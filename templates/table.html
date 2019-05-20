@@ -3,6 +3,6 @@
 {% block body %}
 <h1>Grade Statistics-Table (<a href='/downloads/grade_stats_auswertung.csv'>CSV-Export</a>)</h1>
 <div class="table-responsive">
-    {{ data.to_html(classes="table table-striped table-hover") | safe}}
+    {{ data | safe}}
 </div>
 {% endblock %}

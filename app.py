@@ -1,10 +1,10 @@
 from flask import Flask, render_template, Response
-from data import csv_to_pandas, get_plot_filenames
+from data import csv_to_html, get_plot_filenames
 
 
 app = Flask(__name__)
 # load data
-graduates_df = csv_to_pandas(file_name='grade_stats_auswertung.csv', delimiter=';')
+graduates = csv_to_html(file_name='grade_stats_auswertung.csv', delimiter=';')
 plot_files_dict = get_plot_filenames()
 
 
@@ -15,7 +15,7 @@ def web_index():
 
 @app.route('/table')
 def table():
-    return render_template("table.html", data=graduates_df)
+    return render_template("table.html", data=graduates)
 
 
 @app.route('/plots')

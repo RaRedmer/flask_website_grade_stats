@@ -2,8 +2,8 @@ import pandas as pd
 import os
 
 
-def csv_to_pandas(file_name, delimiter):
-    return pd.read_csv(f'static/tables/{file_name}', sep=delimiter)
+def csv_to_html(file_name, delimiter):
+    return pd.read_csv(f'static/tables/{file_name}', sep=delimiter).to_html(classes="table table-striped table-hover")
 
 
 def get_plot_filenames():
